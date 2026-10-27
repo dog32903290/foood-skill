@@ -1,0 +1,21 @@
+{
+  "project": "Food_AB_Review",
+  "timeline": "AB雙機校對_A下B上",
+  "reviewer": "Record who actually viewed the screenshots",
+  "screenshots": [
+    {
+      "path": "/path/to/actual/resolve-window.png",
+      "sha256": "Copy the real screenshot hash returned by resolve capture"
+    }
+  ],
+  "observations": [
+    "Describe the actual visible track labels, clip blocks, audio waveforms and selected timeline."
+  ],
+  "checks": {
+    "correct_timeline_visible": false,
+    "A_below_B": false,
+    "video_clip_blocks_visible": false,
+    "audio_waveform_visible": false,
+    "saved_and_reopened": false
+  }
+}

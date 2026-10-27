@@ -1,0 +1,4 @@
+interface:
+  display_name: "飲食紀錄片場記與雙機同步"
+  short_description: "本機語音與聲響辨識、Codex 看圖核對、場記表與達芬奇雙機時間線"
+  default_prompt: "使用 $food-shotlog-sync 為這批飲食紀錄片素材製作場記，核對畫面與語音，並依配對表建立 A 下 B 上的達芬奇校對時間線。"

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "source_root": "/path/to/your/project/01_video",
+  "work_dir": "/path/to/your/project/outputs/foodlog-run",
+  "cards": {
+    "A001": {"camera": "A", "path": "A001"},
+    "A002": {"camera": "A", "path": "A002"},
+    "B001": {"camera": "B", "path": "B001"},
+    "B002": {"camera": "B", "path": "B002"}
+  },
+  "asr": {
+    "backend": "faster-whisper",
+    "model": "small",
+    "language": "zh",
+    "device": "cpu",
+    "compute_type": "int8",
+    "threads": 4,
+    "chunk_seconds": 60
+  },
+  "vision_model": {
+    "endpoint": "http://127.0.0.1:1234/v1",
+    "model": "your-installed-local-vision-model"
+  },
+  "text_model": {
+    "endpoint": "http://127.0.0.1:1234/v1",
+    "model": "your-installed-local-text-model"
+  },
+  "environment": {
+    "threads": 3
+  },
+  "sync": {
+    "max_waveform_comparisons": 10000,
+    "clock_seed_pairs": 3,
+    "clock_seed_tolerance_seconds": 3,
+    "clock_uncertainty_seconds": 2,
+    "minimum_overlap_seconds": 0.5,
+    "anchor_min_correlation": 0.12,
+    "peak_min_correlation": 0.18,
+    "lag_tolerance_seconds": 0.04
+  },
+  "resolve": {
+    "project_name": "Food_AB_Review",
+    "timeline_name": "AB雙機校對_A下B上",
+    "fps": "30000/1001",
+    "fps_setting": "29.97",
+    "width": 1920,
+    "height": 1080,
+    "start_timecode": "01:00:00:00",
+    "gap_frames": 30
+  }
+}

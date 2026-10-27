@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "food-shotlog-sync"
+version = "0.1.0"
+description = "Local documentary shot logs, evidence-based Codex vision review, and DaVinci Resolve A/B review timelines"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "dog32903290"}]
+dependencies = ["numpy>=1.24,<3", "openpyxl>=3.1,<4", "Pillow>=10,<13"]
+
+[project.optional-dependencies]
+asr = ["faster-whisper>=1.1,<2"]
+mlx = ["mlx-whisper>=0.4,<1; sys_platform == 'darwin'"]
+environment = ["torch>=2.6,<3", "transformers>=4.45,<5", "soundfile>=0.12,<1"]
+capture = ["pyobjc-framework-Quartz>=10; sys_platform == 'darwin'"]
+
+[project.scripts]
+foodlog = "foodlog.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "skills/food-shotlog-sync/scripts"}
+
+[tool.setuptools.packages.find]
+where = ["skills/food-shotlog-sync/scripts"]
+include = ["foodlog*"]

@@ -1,0 +1,26 @@
+{
+  "review_mode": "codex_native_vision",
+  "reviewer": "Record the actual active Codex model or reviewer here",
+  "clips": [
+    {
+      "clip_id": "A001/CLIP/SHOT0001.MP4",
+      "shot_size": "近景",
+      "scene_description": "戴手套的手在工作檯上切分白色片狀食物。品項名稱需由訪談或其他證據核對。",
+      "evidence": [
+        {
+          "path": "/path/to/generated/review-pack/frame.jpg",
+          "sha256": "Copy the actual hash from this clip's review-pack manifest"
+        }
+      ],
+      "meaningful_dialogue": [
+        {
+          "start": 2.5,
+          "end": 5.1,
+          "channel": 1,
+          "text": "Copy only words supported by the original audio or ASR evidence",
+          "basis": "asr"
+        }
+      ]
+    }
+  ]
+}
